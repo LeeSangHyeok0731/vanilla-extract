@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+const { createVanillaExtractPlugin } = require("@vanilla-extract/next-plugin");
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+const withVanillaExtract = createVanillaExtractPlugin();
 
-export default nextConfig;
+module.exports = withVanillaExtract({
+  reactStrictMode: true,
+  webpack: (config) => {
+    config.resolve.extensions.push(".ts", ".tsx"); // .ts, .tsx 확장자 추가
+    return config;
+  },
+});
