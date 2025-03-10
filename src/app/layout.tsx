@@ -1,3 +1,5 @@
+import "../style/global.css.ts";
+
 export default function RootLayout({
   children,
 }: Readonly<{

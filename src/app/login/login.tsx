@@ -5,6 +5,7 @@ export default function Login() {
     <div className={S.Container}>
       <div className={S.RedItems} />
       <div className={S.GreyItems} />
+      <h1>로그인</h1>
     </div>
   );
 }
